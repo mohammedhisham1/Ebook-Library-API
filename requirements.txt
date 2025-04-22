@@ -5,3 +5,4 @@ django-cors-headers>=4.7
 whitenoise>=6.9
 dj-database-url>=2.3
 gunicorn
+
