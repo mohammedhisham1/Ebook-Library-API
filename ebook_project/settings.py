@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
 
-ALLOWED_HOSTS = ['ebookfai-production.up.railway.app']
 
 
 
@@ -92,12 +91,24 @@ WSGI_APPLICATION = 'ebook_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+import dj_database_url
+import os
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL', 'postgresql://neondb_owner:npg_yR2Md4Vmcvlg@ep-rapid-credit-a2hkf872-pooler.eu-central-1.aws.neon.tech/neondb?sslmode=require'),
+    )
 }
+
+
+
+
 
 
 # Password validation
