@@ -31,14 +31,14 @@ ALLOWED_HOSTS = ['.vercel.app','127.0.0.1']
 
 
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000',
-    'https://ebookfai-production.up.railway.app',
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000',
+#     'https://ebookfai-production.up.railway.app',
 
-]
-CSRF_TRUSTED_ORIGINS = [
-    'https://ebookfai-production.up.railway.app',
-]
+# ]
+# CSRF_TRUSTED_ORIGINS = [
+#     'https://ebookfai-production.up.railway.app',
+# ]
 
 
 # Application definition
